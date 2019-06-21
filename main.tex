@@ -1,0 +1,139 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{graphicx}
+\usepackage[nottoc]{tocbibind}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage[newfloat]{minted}
+\usepackage{url, hyphenat}
+\usepackage[top=25mm, left=25mm, right=25mm, bottom=20mm]{geometry}
+\usepackage[onehalfspacing]{setspace}
+\usepackage{dirtree}
+\usepackage{csquotes}
+
+\begin{document}
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.4mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+ 
+%----------------------------------------------------------------------------------------
+%	HEADING SECTIONS
+%----------------------------------------------------------------------------------------
+
+\includegraphics[scale=0.5]{images/hska_logo.jpg}\\[2.5cm] % Include a department/university logo - this will require the graphicx package
+\textsc{\Large Seminararbeit}\\[0.5cm] % Major heading such as course name \\
+\Large \textsc{Technologiegestütztes Lernen}
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\HRule \\[0.4cm]
+{ \huge \bfseries Datenschutz und Learning Analytics}\\[0.4cm] % Title of your document
+\HRule \\[1.5cm]
+ 
+%----------------------------------------------------------------------------------------
+%	AUTHOR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Authors:}\\
+Niklas \textsc{Kreutzarek}\\ Moritz \textsc{Ulte} \\Claudio \textsc{Busse}\\ % Your name
+\emph{Betreuer:}\\
+\mbox{Dipl.-Inf. Alexander \textsc{Streicher}} \\
+\mbox{Dipl.-Inf. Dipl.-Ing.-Päd. Martin \textsc{Mandausch}} 
+
+
+\end{flushleft}
+
+\end{minipage}\\[2cm]
+
+% If you don't want a supervisor, uncomment the two lines below and remove the section above
+%\Large \emph{Author:}\\
+%John \textsc{Smith}\\[3cm] % Your name
+
+%----------------------------------------------------------------------------------------
+%	DATE SECTION
+%----------------------------------------------------------------------------------------
+
+{\large \today}\\[2cm] % Date, change the \today to a set date if you want to be precise
+
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+
+\tableofcontents
+
+\newpage
+
+\section{Inhalt}
+
+Für die automatische Analyse von Lernerzuständen werden Verfahren aus dem Bereich Learning
+Analytics eingesetzt, also die Analyse von Nutzerinteraktionsdaten, Lernerprofilen, usw. Die
+Datenerfassung erfolgt dabei zielgerichtet, um beispielsweise die Lernumgebung automatisch an die
+Lernerbedürfnisse zu adaptieren. Fraglich ist, inwieweit die automatische Datenerfassung mit
+geltenden Datenschutzbestimmungen konform gehalten werden können. Sind für eine Adaption
+personenbezogene Daten notwendig? Wie können diese automatisch anonymisiert werden? Was
+sind technische Lösungen dafür? Wie ist der aktuelle Stand der Forschung und Technik bei der
+anonymisierenden Datenerfassung und Benutzerprofilerstellung? Welche positiven und negativen
+Beispiele sind bekannt?
+Der konzeptionelle Teil der Arbeit zeigt anhand eines Beispiels auf, wie Learning Analytics und
+Datenschutz funktionieren kann, unter Einbeziehung automatisch anonymisierender Verfahren. Das
+Anwendungsbeispiel sind adaptive digitale Lernspiele für die Bildauswertung
+
+\section{Einleitung}
+
+In dieser Arbeit geht es, um Learning Analytics mit Bezug auf den Datenschutz. Zuerst werden Grundlagen geklärt, daraufhin wird der aktuelle Stand der Technik und Forschung vorgestellt und zuletzt wird anhand eines Anwendungsbeispiels aufgezeigt, wie mithilfe der zuvor vorgestellten Grundlagen, Learning Analytics und Datenschutz funktionieren kann.
+
+\subsection{Motivation}
+
+\begin{quote}
+    ``Everybody’s talking about Big Data and Learning Analytics, but if you don’t solve privacy first it is going to be killed before it has really started."(Larry Johnson, CEO of the New Media Consortium(NMC). \\
+    
+    Learning Analytics hat zum Ziel, dass Lernen individuell an die Fähigkeiten und den Wissensstand der Lernenden anzupassen. Dafür werden eine vielzahl an Daten gesammelt und ausgewertet. Auf Grundlage der Auswertung werden Rückschlüsse gezogen, wo zum Beispiel Defizite vorhanden sind und deshalb verschärft auf diesen Bereich der Lernfokus gesetzt werden sollte.
+\end{quote}
+
+\subsection{Zielsetzung}
+
+\section{Grundlagen}
+
+\subsection{Datenschutz}
+
+\subsection{DSGVO}
+
+\subsection{Intelligente Lernumgebung}
+
+\subsection{ITS}
+
+\subsection{Digitale Lernspiele (Educational Serious Games)}
+
+\section{Stand der Forschung und Technik}
+
+\subsection{Datenschutz \& E-Learning}
+
+\subsection{Datenschutz/DSGVO \& Learning Analytics}
+
+\subsection{Anonymisierungsmethoden}
+
+\subsection{Pseudoanonymisierung}
+
+\section{Konzeption: E-Learning + Serious Gaming + Learning Analytics + Datenschutz/DSGVO}
+
+\section{Szenario: Learning Analytics für Bildauswertung-Lernspiel}
+
+\section{Fazit \& Ausblick}
+
+\newpage
+\listoffigures
+\bibliographystyle{unsrt}
+\newpage
+\bibliography{literatur}
+
+\end{document}
