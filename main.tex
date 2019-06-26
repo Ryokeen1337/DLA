@@ -75,10 +75,10 @@ Niklas \textsc{Kreutzarek}\\ Moritz \textsc{Ulte} \\Claudio \textsc{Busse}\\ % Y
 
 \section{Inhalt}
 
-Für die automatische Analyse von Lernerzuständen werden Verfahren aus dem Bereich Learning
-Analytics eingesetzt, also die Analyse von Nutzerinteraktionsdaten, Lernerprofilen, usw. Die
+Für die automatische Analyse des Lernfortschritts eines NUtzers werden Verfahren aus dem Bereich Learning-Analytics
+eingesetzt, also die Analyse von Daten wie Nutzerinteraktionen, Lernprofilen, usw. Die
 Datenerfassung erfolgt dabei zielgerichtet, um beispielsweise die Lernumgebung automatisch an die
-Lernerbedürfnisse zu adaptieren. Fraglich ist, inwieweit die automatische Datenerfassung mit
+Bedürfnisse des Nutzers zu adaptieren. Fraglich ist, inwieweit die automatische Datenerfassung mit
 geltenden Datenschutzbestimmungen konform gehalten werden können. Sind für eine Adaption
 personenbezogene Daten notwendig? Wie können diese automatisch anonymisiert werden? Was
 sind technische Lösungen dafür? Wie ist der aktuelle Stand der Forschung und Technik bei der
@@ -90,7 +90,7 @@ Anwendungsbeispiel sind adaptive digitale Lernspiele für die Bildauswertung
 
 \section{Einleitung}
 
-In dieser Arbeit geht es, um Learning Analytics mit Bezug auf den Datenschutz. Zuerst werden Grundlagen geklärt, daraufhin wird der aktuelle Stand der Technik und Forschung vorgestellt und zuletzt wird anhand eines Anwendungsbeispiels aufgezeigt, wie mithilfe der zuvor vorgestellten Grundlagen, Learning Analytics und Datenschutz funktionieren kann.
+In dieser Arbeit geht es, um Learning-Analytics mit Bezug auf den Datenschutz. Zuerst werden Grundlagen geklärt, daraufhin wird der aktuelle Stand der Technik und Forschung vorgestellt und zuletzt wird anhand eines Anwendungsbeispiels aufgezeigt, wie mithilfe der zuvor vorgestellten Grundlagen, Learning-Analytics und Datenschutz funktionieren kann.
 
 \subsection{Motivation}
 
@@ -103,34 +103,55 @@ In dieser Arbeit geht es, um Learning Analytics mit Bezug auf den Datenschutz. Z
 \newpage   
 \subsection{Zielsetzung}
 
-Im Rahmen dieses Dokuments soll eine genauere Einsicht in die aktuelle Datenschutz-Grundverordnung, im Folgenden nur DSGVO genannt und deren Auswirkungen auf die Speicherung und Nutzung gegeben werden. Dazu wird zuerst erklärt was das DSGVO beinhaltet, auf welche Daten und Situationen es sich bezieht. Im Anschluss werden Probleme die sich durch das DSGVO im Bereich Learning-Analytics genauer erläutert und es wird versucht Lösungsvorschläge für diese Probleme aufzuzeigen.
+Im Rahmen dieses Dokuments soll eine genauere Einsicht in die aktuelle Datenschutz-Grundverordnung, im Folgenden nur DSGVO genannt und deren Auswirkungen auf die Speicherung und Nutzung gegeben werden. Dazu wird zuerst erklärt was das DSGVO beinhaltet, auf welche Daten und Situationen es sich bezieht. Im Anschluss werden Herausforderungen die sich durch das DSGVO im Bereich Learning-Analytics und Big-Data genauer erläutert und es wird versucht Ansätze und Lösungsvorschläge zu geben, um diese zu bewältigen.
 
 \section{Grundlagen}
 
-In diesem Kapitel werden die Grundlagen des DSGVO sowie nötigen Begrifflichkeiten erläutert. Dazu wird zuerst auf den Datenschutz allgemein und anschließend auf das DSGVO im genaueren eingegangen.
+In diesem Kapitel werden die Grundlagen des DSGVO sowie nötigen Begrifflichkeiten erläutert. Dazu wird zuerst auf den Datenschutz allgemein und anschließend auf das DSGVO im genaueren eingegangen. Dazu zählt auch was Datenschutz und die DSGVO für Learning-Analytics und Big-Data bedeutet.
 
 \subsection{Datenschutz}
 
+Im Internet oder bei der Nutzung von Software geben Nutzer oft eine Vielzahl von Informationen preis, die von einem Unternehmen gespeichert, verarbeitet und ausgewertet werden könnten. Dabei ist die Informationsmenge über die Jahre stetig gestiegen und auch ihre Auswertung und Nutzung wurde zunehmend komplexer. Auch ist das Bewusstsein von Nutzern über die Preisgabe ihrer persönlichen Daten nicht immer ausgeprägt, sie geben also oft Informationen preis, in der Annahme die Daten seien sicher.\\
+Werden viele Daten gesammelt, sei es von Unternehmen oder auch vom Staat, so taucht immer wieder ein Schlagwort auf: ``Der gläserne Mensch"\\
+Mit diesem Ausdruck wird die Sorge umschrieben, dass durch wissentlich oder unwissentlich preisgegebene Daten nahezu alles über einen Menschen in Erfahrung gebracht werden kann und die Privatsphäre verschwindet und der Betroffene keine Möglichkeit hat dies zu unterbinden. Zuletzt war dies bei der Debatte um die Vorratsdatenspeicherung präsent.\\
 
-Im Internet oder bei der Nutzung von Software geben Nutzer oft eine Vielzahl von Informationen preis, die von einem Unternehmen gespeichert, verarbeitet und ausgewertet werden könnten.
-Die offensichtlichsten Daten sind hierbei zum Beispiel:
+\noindent Die offensichtlichsten Daten sind hierbei zum Beispiel:
 \begin{itemize}
 \item Vor- und Nachnamen
 \item Adresse 
 \item Alter und/oder Geburtsdatum
+\item Bankdaten
 \end{itemize}
 
+\newpage
 \noindent 
 Einem Unternehmen stehen oft jedoch auch Daten zur Verfügung, von denen ein Nutzer oft nicht weiß, dass er sie einem Unternehmen übermittelt. Dazu gehören unter anderem:
 \begin{itemize}
 \item Ip-Adresse
 \item Browse-Verhalten über Cookies und Tracker
 \item Aufrufhäufigkeit einer Website
+\item Aufenthaltsort bei Nutzung eines mobilen Gerätes
 \end{itemize}
 
 \noindent 
-Mittels solcher gesammelten Daten, kann ein Unternehmen viel über seine Nutzer herausfinden. Dies kann dazu genutzt werden personalisierte Angebote zu erstellen oder aber auch an den Kunden angepasste Werbung anzuzeigen. Jedoch könnten diese Daten auch an dritte verkauft werden, welche die Daten für andere Zwecke nutzen ohne, dass ein Kunde oder Nutzer davon Kenntnis hat. 
-Somit ist der allgemeine Datenschutz ein Schutz des Kunden vor genau solch einer Nutzung seiner Daten und bedeutet, dass die Daten eines Kunden oder Nutzers vertraulich behandelt werden um ihn vor missbräuchlicher Datenverarbeitung zu schützen und sein Recht auf informationelle Selbstbestimmung zu gewährleisten. Ebenso kann es als die wahrung seiner Privatsphäre verstanden werden und soll dem Nutzer/Kunden ermöglichen zu entscheiden, wem er wann welche seiner persönlichen Daten zugänglich macht.
+Solche Daten werden allgemein als personenbezogene Daten bezeichnet. In Deutschland gelten solche Daten als personenbezogen, die einer identifizierten oder identifizierbaren natürlichen Person zugeordnet werden können.
+Wird im weiteren nur von Daten gesprochen, so handelt es sich dabei immer personenbezogene Daten.\\
+
+\noindent Mittels solcher gesammelten Daten, kann ein Unternehmen viel über seine Nutzer herausfinden. Dies kann dazu genutzt werden personalisierte Angebote zu erstellen oder aber auch an den Kunden angepasste Werbung anzuzeigen. Jedoch könnten diese Daten auch an dritte verkauft werden, welche die Daten für andere Zwecke nutzen ohne, dass ein Kunde oder Nutzer davon Kenntnis hat. 
+Es stellen sich beim somit Datenschutz für einen Nutzer einige von Fragen:
+\begin{itemize}
+	\item Wie sicher sind die Daten gespeichert ?
+	\item Wer hat zugriff auf die Daten ?
+	\item Was für Daten hat ein Unternehmen ?
+\end{itemize}
+\noindent Datenschutz ist auch aus einem anderem Grund wichtig, viele Daten bedeuten für jene Unternehmen die sie Besitzen ein gewissen Maß an Macht und natürlich Geld. Wie bereits angesprochen können Unternehmen solche Daten nutzen um Werbung zu personalisieren oder anonyme Daten an andere Unternehmen verkaufen. So verdiente Google durch seine Informationen über Nutzer Ende 2016 etwa 79 Milliarden Dollar durch angepasste Werbung und deren Einnahmen.\\ Ein anderes Beispiel wie über die Sammlung von Daten Geld verdient werden kann ist die Schufa. Eine Anfrage an dieses Institut kostet und ist nur möglich wenn personenbezogene Daten, wie die Bonität eines Betroffenen, vorhanden sind.\\
+Grade von Staatlichen Stellen ist ein inzwischen beliebtes Argument um viele Daten sammeln zu können die Terrorvermeidung. So wird versucht Telefondaten, Chat-Verläufe und andere Daten zu speichern um eventuell auf sie zugreifen zu können falls es nötig wird. 
+
+\noindent Durch den Datenschutz soll ein Nutzer vor missbräuchlicher Verarbeitung seiner Daten geschützt werden und sein Recht auf informationelle Selbstbestimmung soll gewährleisten werden. Ebenso dient es als Wahrung seiner Privatsphäre und soll dem Nutzer/Kunden ermöglichen zu entscheiden, wem er wann welche seiner persönlichen Daten zugänglich macht. Wichtig ist hierbei vor allem das Recht auf informationelle Selbstbestimmung, da es unter das in \textbf{Art 1 Abs.1 GG} bestimmte allgemeine Persönlichkeitsrecht fällt. Nach diesem Recht hat jeder Bürger und somit auch Nutzer einer Website oder Services, das Recht über die Preisgabe und Verwendung seiner Daten selbst zu entscheiden.
+Somit ist der allgemeine Datenschutz ein Schutz des Kunden bzw. Nutzers vor missbräuchlicher Nutzung seiner Daten und bedeutet, dass die Daten eines Kunden oder Nutzers vertraulich behandelt werden. Dieser Datenschutz bezieht sich jedoch nicht nur auf das Internet sondern auf alle Bereiche in denen Daten eines Kunden oder Nutzers gespeichert werden. Ebenso sollen dem übermäßigen Sammeln von Daten enge Grenzen gesetzt werden.\\
+
+\noindent Die rechtliche Grundlage für den Datenschutz in Deutschland stellt das \textbf{Bundesdatenschutzgesetz(BDSG)} dar, welches im Jahre 2003 in Kraft gesetzt wurde. Es soll die Daten der Bundesbürger vor unbefugten Zugriffen und Missbrauch schützen. Genauer gibt es Einrichtungen, welche Daten von einer Person überlassen bekommen haben vor, diese Daten effektiv zu schützen und nur dann zu erheben und zu sammeln, wenn die Person dem effektiv auch zugestimmt hat. Dazu gehört auch die Möglichkeit die Daten zur Kontrolle jederzeit einsehen zu können. Weiterhin beschränkt das BDSG welche Daten erhoben werden dürfen, wann dies geschehen darf und zu welchem Zweck.
+
 
 \cite{wikiDatenschutz,datenschutz_internet}
 
