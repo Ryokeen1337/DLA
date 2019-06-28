@@ -96,9 +96,10 @@ In dieser Arbeit geht es, um Learning-Analytics mit Bezug auf den Datenschutz. Z
 
 \begin{quote}
     ``Everybody’s talking about Big Data and Learning Analytics, but if you don’t solve privacy first it is going to be killed before it has really started."(Larry Johnson, CEO of the New Media Consortium(NMC). \\
-    
-    Learning Analytics hat zum Ziel, dass Lernen individuell an die Fähigkeiten und den Wissensstand der Lernenden anzupassen. Dafür werden eine vielzahl an Daten gesammelt und ausgewertet. Auf Grundlage der Auswertung werden Rückschlüsse gezogen, wo zum Beispiel Defizite vorhanden sind und deshalb verschärft auf diesen Bereich der Lernfokus gesetzt werden sollte.
 \end{quote}
+
+Learning Analytics hat zum Ziel, dass Lernen individuell an die Fähigkeiten und den Wissensstand der Lernenden anzupassen. Dafür werden eine Vielzahl an Daten, über den Lernenden gesammelt und ausgewertet. Auf Grundlage der Auswertungen können Rückschlüsse hinsichtlich vorhandener Defizite des Lernenden gezogen werden.
+Daraufhin können Gegenmaßnahmen eingeleitet werden, wie z.~B. verschärft den Lernfokus auf Bereiche zu richten, in denen mehr Übung notwendig ist, um somit den Lernenden besser bei seinem Lernprozess zu unterstützen. \\
 
 \newpage   
 \subsection{Zielsetzung}
@@ -268,6 +269,8 @@ Ein intelligentes Tutorsystem (ITS) ist ein Computersystem, das darauf abzielt, 
 
 
 \subsection{Digitale Lernspiele (Educational Serious Games)}
+Lernen mit Spaß ist der Grundsatz von Serious Games. Der Spaß am lernen fördert die Aufnahmefähigkeit des Lernstoffs. Das Wissen wird durch interaktive Methoden, die wie ein Spiel sind übermittelt, diese Strategie kann in jeder Bildungsstufe angewandt werden. 
+Insbesonders digitale Lernspiele ermöglichen auch durch Fehler, die sonst einen Schaden verursachen würden, in der digitalen Welt durchzuführen. Das "Learning by doing" wird hiermit gefördert. Ein gutes Beispiel für so ein digitales Lernspiel wären Flugsimulator Spiele.
 
 \section{Stand der Forschung und Technik}
 Im Bereich des Datenschutzes gibt es kaum bis keine Forschung, das die Rahmenbedingungen und Vorgaben Gesetzlich sind und somit feststehen. Diese Vorgaben sind einzuhalten, wie dies technisch und fachlich umgesetzt wird, wird im DSGVO auf der fachlichen Ebene beschrieben. Die technische Umsetzung ist dabei meist trivial oder aber siedelt sich eher im Bereich der Datensicherheit an, welche nicht Teil dieser Arbeit ist. Dennoch soll in den folgenden Kapiteln ein kurzer Überblick über die gängigsten und grundlegendsten Optionen für die anfängliche Sicherstellung der Einhaltung des DSGVO gegeben werden.
@@ -282,6 +285,44 @@ Da wie bereits in den vorhergehenden Kapiteln der Datenschutz über das DSGVO al
 Da ein Lernspiel in der Regel mehrfach vom gleichen Nutzer aufgerufen und genutzt wird, ist eine Art der Identifikation nötig. Dies kann jedoch wie vom DSGVO vorgesehen über ein Pseudonym erfolgen, was ein erster Schritt zum Datenschutz des Betroffenen ist. Weitere personenbezogene Angaben dürfen hierbei, erst gespeichert werden, wenn der Betroffene dem zustimmt. Dies ist hierbei für alle Bereiche die das DSGVO tangiert gleich.
 
 \subsection{Anonymisierungsmethoden}
+Unter Anonymisierung versteht man nach §~3~Abs.~6~BDSG: „Das Verändern personenbezogener Daten derart, dass die Einzelangaben über persönliche oder sachliche Verhältnisse nicht mehr oder nur mit einem unverhältnismäßig großen Aufwand an Zeit, Kosten und Arbeitskraft einer bestimmten oder bestimmbaren natürlichen Person zugeordnet werden können.“ \\
+
+\noindent Das bedeutet, dass für Daten, welche anonymisiert vorliegen, die Grundsätze des Datenschutzes nicht gelten. Der Einsatz von Anonymisierung bildet somit eine Gesetzeskonforme Möglichkeit, mit sensiblen Daten umzugehen. \\
+
+\noindent Im Folgenden wird ein kleines Beispiel aufgeführt, wie ein Datensatz, mithilfe einer einfachen Methode anonymisiert werden kann. Im Anschluss wird aufgezeigt, warum es weitere Methoden bedarf, um die Daten besser zu schützen. \\
+
+\noindent Die Erste unten abgebildete Tabelle zeigt einen Datensatz, in dem Vorname, Nachname, Geschlecht, Adresse, PLZ, Geburtsdatum und Lieblingsfarbe gespeichert sind. Zur Anonymisierung müssen die personenbezogenen Daten identifiziert werden und daraufhin aus dem Datensatz entfernt werden. In diesem Fall, wären das der Vorname, der Nachname und die Adresse, da eine Person dadurch eindeutig identifiziert werden kann.
+
+\vspace{10mm}
+\begin{tabular}{lcrrrrr}
+	Vorname & Nachname & Geschlecht & Adresse & PLZ & Geburtsdatum & Lieblingsfarbe\\
+	\hline
+	Max & Musermann & M & Musterweg 12 & 76139 & 12.12.2012 & Rot
+	
+\end{tabular}
+\vspace{10mm}
+
+Entfernt man die Daten aus dem Datensatz, so entsteht eine neue Tabelle. Der neue Datensatz ist nun anonymisiert. \\
+
+\begin{tabular}{lcrr}
+	
+	Geschlecht & PLZ & Geburtsdatum & Lieblingsfarbe\\
+	\hline
+	M & 76139 & 12.12.2012 & Rot
+	
+\end{tabular}
+\vspace{10mm}
+
+
+\noindent Sweeny zeigt jedoch in einer Studie \cite{IdentificationUSCitizens}, dass in den USA, 87\% aller Menschen eindeutig über ihre Postleitzahl, ihr Geburtsdatum und ihr Geschlecht identifiziert werden können. Die Ergebnisse aus der Studie verdeutlichen, dass das Weglassen von z.~B. Namen und Adresse nicht ausreicht, um eine Zuordnung zu einer natürlichen Person zu verhindern. \\
+
+\noindent Eine einfach Möglichkeit dies zu verhindern, wäre das Löschen aller Attribute, welche auf irgendeine Weise, Rückschlüsse auf die natürliche Person geben könnten. Das führt jedoch dazu, dass die Qualität des Datensatzes erheblich abnimmt und eine sinnvolle Auswertung verhindert. \\
+
+\noindent Zur Unterstützung der Anonymisierung personenbezogener Daten gibt es Modelle, welche bei der oben beschriebenen Problematik versuchen Abhilfe zu schaffen. \cite{AnonymisierungsMethoden}
+
+\subsubsection*{K-Anonymität}
+
+Die K-Anonymität verhindert die Reidentifizierung einer Person in einem Datenbestand durch Anonymisierung dieser in einer Gruppe von anderen Personen des Datenbestandes. 
 
 \subsection{Pseudonymisierung}
 
@@ -298,7 +339,7 @@ Eine weitere Art des Schutzes der zugänglich gemachten Daten eines Nutzers stel
 	\hline
 	0001 & Peter & Meyer & Taunusbank
 	
-\end{tabular}\\
+\end{tabular}\vspace{10mm}\\
 
 \noindent Nach der Pseudonymisierung\\
 
@@ -308,7 +349,7 @@ Eine weitere Art des Schutzes der zugänglich gemachten Daten eines Nutzers stel
 	\hline
 	0001 & Taunusbank
 	
-\end{tabular}\\\\
+\end{tabular}\vspace{10mm}\\\\
 
 \begin{tabular}{lcrr}
 	
@@ -316,7 +357,7 @@ Eine weitere Art des Schutzes der zugänglich gemachten Daten eines Nutzers stel
 	\hline
 	0001 & Peter & Meyer
 	
-\end{tabular}
+\end{tabular}\vspace{10mm}
 
 \section{Szenario: Learning Analytics für ein adaptives \\Bildauswertung-Lernspiel}
 
@@ -364,7 +405,7 @@ In dieser Datenschutzerklärung muss darauf hingewiesen werden, dass die Registr
 
 In diesem Szenario gehen wir davon aus, dass der SAR-Tutor adaptiv ist. Um den Lernverlauf für den Lernenenden am besten zu gestalten benötigt das Spiel verschiedene Daten.\\
 
-Wie im Szenario 1 wird eine Registrierung mit Benutzername und Passwort benötigt. Der SAR-Tutor benötigt aber auch noch Daten zur adaptivität. Um eine Einstufung vor dem Spielen zu erstellen benötigen wir in unserem Fall das Alter, das Geschlecht und den Bildungsgrad des Lernenden. Diese Daten sollen dann  auch bei der Registrierung abgefragt werden. 
+\noindent Wie im Szenario 1 wird eine Registrierung mit Benutzername und Passwort benötigt. Der SAR-Tutor benötigt aber auch noch Daten zur adaptivität. Um eine Einstufung vor dem Spielen zu erstellen benötigen wir in unserem Fall das Alter, das Geschlecht und den Bildungsgrad des Lernenden. Diese Daten sollen dann  auch bei der Registrierung abgefragt werden. 
 Im weiteren Spielverlauf kann das Lernverhalten des Lernenden basierend auf das festgestellte Lernmuster (Prozent der korrekten Antworten, Zeit zum Antworten) weiterhin angepasst werden. Diese Daten werden auch gespeichert.
 
 Analog zum Szenario 1 muss bei der Registrierung (vor dem Speichern von Daten) die Datenschutzerklärung akzeptiert werden. In diesem Fall wird die Datenschutzerklärung noch um die Daten ergänzt, die wir für die Adaptivität benötigen.\\
@@ -399,7 +440,6 @@ Die Daten könnten dann wieder pseudonymisiert in der Datenbank gespeichert werd
 \section{Fazit \& Ausblick}
 Datenschutz, das DSGVO, deren Umsetzung und Einhaltung dieser Bestimmungen sind ein umfangreiches und komplexes Thema. Es gibt viele Bereiche und Punkte, wie die Dokumentation, Weitergabe der Daten an Dritte, Art der Speicherung und Löschung welche beachtet werden müssen und bei denen Unternehmen oft juristischen Rat einholen sollten. Das DSGVO ist so ausgelegt, dass es allgemein gültig ist, also nicht nur für Software, sondern für alle Arten der Verarbeitung von personenbezogenen Daten. Personenbezogene Daten dürfen somit nur Zweckgebungen nach Ausdrücklicher Erlaubnis des Betroffenen gespeichert und verarbeitet werden. Ein Notlösung welche Rechtlich dennoch abgesichert werden muss, stellt die vollständig Anonyme Speicherung von Daten dar. Die genaue Umsetzung in einem Unternehmen hängt zudem von den verarbeiteten Daten und der Art der Verarbeitung ab, weshalb in dieser Arbeit darauf nur sehr beschränkt anhand von kleinen Beispielen eingegangen werden konnte. Somit wird eher ein allgemeiner Überblick über den Datenschutz mit einigen Hinweisen und Herausforderungen die sich im Bereich Learning Analytics ergeben können.\\Dennoch ist der Datenschutz ein anhaltendes und wichtiges Thema und bei korrekter Umsetzung schützt es ein Unternehmen nicht nur vor rechtlichen Konsequenzen, es stärkt auch das Vertrauen der Kunden/Nutzer in ein Unternehmen.
 \newpage
-\listoffigures
 \bibliographystyle{unsrt}
 \newpage
 \bibliography{literatur}
