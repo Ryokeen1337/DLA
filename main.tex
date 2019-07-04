@@ -322,7 +322,21 @@ Entfernt man die Daten aus dem Datensatz, so entsteht eine neue Tabelle. Der neu
 
 \subsubsection*{K-Anonymität}
 
-Die K-Anonymität verhindert die Reidentifizierung einer Person in einem Datenbestand durch Anonymisierung dieser in einer Gruppe von anderen Personen des Datenbestandes. 
+Die K-Anonymität verhindert die Zuordnung zu einer natürlichen Person in einem Datenbestand durch Anonymisierung dieser in einer Gruppe von anderen Personen des Datenbestandes. Die drei Merkmale von vorhin, mit denen eine Person annähernd genau identifiziert werden kann, werden Quasi-Identifiers genannt. Die k-Anonymität bezieht sich auf die Identifizierbarkeit einer Person in einer Gruppe. Man versucht Merkmale, die eine Person eindeutig identifizierbar machen, innerhalb einer Gruppe, so abzuändern, dass mehrere Personen in der Gruppe die selben Quasi-Identifier haben. Im Folgenden wird ein Beispiel für eine K=2 Anonymisierte Tabelle gezeigt. K=2 bedeutet, dass mindestens zwei Personen das gleiche Merkmal haben müssen. \\
+
+\begin{tabular}{lcrr}
+	
+	Geschlecht & PLZ & Geburtsdatum & Lieblingsfarbe\\
+	\hline
+	M & 7613* & *.*.2012 & Rot \\
+	M & 7613* & *.*.2012 & Blau \\
+	F & 7822* & *.*.2010 & Grün \\
+	F & 7822* &  *.*.2010 & Schwarz \\
+	
+\end{tabular}
+\vspace{10mm}
+
+Im vorherigen Beispiel wird dies geschaffen, indem man Teilinformationen weglässt. Es wird die letzte Ziffer der Postleitzahl durch ein Symbol ersetzt, somit haben mehrere Leute die gleiche Postleitzahl. Zudem wird der Tag und der Monat des Geburtsdatums durch ein Symbol ersetzt. Das anwenden der K-Anonymität hat natürlich auch großen Einfluss auf die Datenqualität, jedoch nicht so stark, wie das Löschen der Felder.
 
 \subsection{Pseudonymisierung}
 
