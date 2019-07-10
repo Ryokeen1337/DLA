@@ -86,27 +86,30 @@ anonymisierenden Datenerfassung und Benutzerprofilerstellung? Welche positiven u
 Beispiele sind bekannt?
 Der konzeptionelle Teil der Arbeit zeigt anhand eines Beispiels auf, wie Learning Analytics und
 Datenschutz funktionieren kann, unter Einbeziehung automatisch anonymisierender Verfahren. Das
-Anwendungsbeispiel sind adaptive digitale Lernspiele für die Bildauswertung
+Anwendungsbeispiel sind adaptive digitale Lernspiele für die Bildauswertung.
 
 \section{Einleitung}
 
-In dieser Arbeit geht es, um Learning-Analytics mit Bezug auf den Datenschutz. Zuerst werden Grundlagen geklärt, daraufhin wird der aktuelle Stand der Technik und Forschung vorgestellt und zuletzt wird anhand eines Anwendungsbeispiels aufgezeigt, wie mithilfe der zuvor vorgestellten Grundlagen, Learning-Analytics und Datenschutz funktionieren kann.
+In dieser Arbeit geht es um Learning-Analytics mit Bezug auf den Datenschutz. Zuerst werden Grundlagen geklärt, daraufhin wird der aktuelle Stand der Technik und Forschung vorgestellt und zuletzt wird anhand eines Anwendungsbeispiels aufgezeigt, wie mithilfe der zuvor vorgestellten Grundlagen, Learning-Analytics und Datenschutz funktionieren kann.
 
 \subsection{Motivation}
 
 \begin{quote}
     ``Everybody’s talking about Big Data and Learning Analytics, but if you don’t solve privacy first it is going to be killed before it has really started."(Larry Johnson, CEO of the New Media Consortium(NMC). \\
+    
+    Learning Analytics hat zum Ziel, dass Lernen individuell an die Fähigkeiten und den Wissensstand der Lernenden anzupassen. Dafür werden eine Vielzahl an Daten, über den Lernenden gesammelt und ausgewertet. Auf Grundlage der Auswertungen können Rückschlüsse hinsichtlich vorhandener Defizite des Lernenden gezogen werden.
+    Daraufhin können Gegenmaßnahmen eingeleitet werden, wie z.~B. verschärft den Lernfokus auf Bereiche zu richten, in denen mehr Übung notwendig ist, um somit den Lernenden besser bei seinem Lernprozess zu unterstützen. \\
+    
+    Das Sammeln von Daten bringt eine große Verantwortung mit sich und es fügt kein Weg daran vorbei sich mit dem Datenschutz auseinander zu setzen.
 \end{quote}
 
-\noindent Learning Analytics hat zum Ziel, dass Lernen individuell an die Fähigkeiten und den Wissensstand der Lernenden anzupassen. Dafür werden eine Vielzahl an Daten, über den Lernenden gesammelt und ausgewertet. Auf Grundlage der Auswertungen können Rückschlüsse hinsichtlich vorhandener Defizite des Lernenden gezogen werden.
-Daraufhin können Gegenmaßnahmen eingeleitet werden, wie z.~B. verschärft den Lernfokus auf Bereiche zu richten, in denen mehr Übung notwendig ist, um somit den Lernenden besser bei seinem Lernprozess zu unterstützen. \\
-
-\newpage   
 \subsection{Zielsetzung}
 
 Im Rahmen dieses Dokuments soll eine genauere Einsicht in die aktuelle Datenschutz-Grundverordnung, im Folgenden nur DSGVO genannt und deren Auswirkungen auf die Speicherung und Nutzung gegeben werden. Dazu wird zuerst erklärt was das DSGVO beinhaltet, auf welche Daten und Situationen es sich bezieht. Im Anschluss werden Herausforderungen die sich durch das DSGVO im Bereich Learning-Analytics und Big-Data genauer erläutert und es wird versucht Ansätze und Lösungsvorschläge zu geben, um diese zu bewältigen.
 
+
 \section{Grundlagen}
+%http://publications.jrc.ec.europa.eu/repository/bitstream/JRC104031/lfna28294enn.pdf TODO: LACE
 
 In diesem Kapitel werden die Grundlagen des DSGVO sowie nötigen Begrifflichkeiten erläutert. Dazu wird zuerst auf den Datenschutz allgemein und anschließend auf das DSGVO im genaueren eingegangen. Dazu zählt auch was Datenschutz und die DSGVO für Learning-Analytics und Big-Data bedeutet.
 
@@ -124,7 +127,6 @@ Mit diesem Ausdruck wird die Sorge umschrieben, dass durch wissentlich oder unwi
 \item Bankdaten
 \end{itemize}
 
-\newpage
 \noindent 
 Einem Unternehmen stehen oft jedoch auch Daten zur Verfügung, von denen ein Nutzer oft nicht weiß, dass er sie einem Unternehmen übermittelt. Dazu gehören unter anderem:
 \begin{itemize}
@@ -213,22 +215,21 @@ Der genaue Räumliche Anwendungsbereich des DSGVO ist genau in \textbf{Art. 3 li
 	\item Die Verarbeitung ist erforderlich, um lebenswichtige Interessen der betroffenen Person oder einer anderen natürlichen Person zu schützen
 \end{itemize}\label{verarbeitung_recht}
 \cite{noauthor_datenschutz-grundverordnung_nodate}\\
-Als Bedingungen für eine Einwilligung gelten laut DSGVO folgende im Auszug von \textbf{Art. 7 lit. a DSGVO} genannten Punkte:
+Als Bedingungen für eine Einwilligung gelten laut DSGVO folgende im Auszug von \textbf{Art. 6 lit. a DSGVO} genannten Punkte:
 \begin{itemize}
 	\item Beruht die Verarbeitung auf einer Einwilligung, muss der Verantwortliche nachweisen können, dass die betroffene Person in die Verarbeitung ihrer personenbezogenen Daten eingewilligt hat
 	\item Erfolgt die Einwilligung der betroffenen Person durch eine schriftliche Erklärung, die noch andere Sachverhalte betrifft, so muss das Ersuchen um Einwilligung in verständlicher und leicht zugänglicher Form in einer klaren und einfachen Sprache so erfolgen, dass es von den anderen Sachverhalten klar zu unterscheiden ist. Teile der Erklärung sind dann nicht verbindlich, wenn sie einen Verstoß gegen diese Verordnung darstellen.
 \end{itemize}
 \cite{noauthor_datenschutz-grundverordnung_nodate}\\
 Wie durch diese Auszüge zu erkennen ist, regelt das DSGVO relativ genau wie mit personenbezogenen Daten umzugehen ist. Die Anwendung ist für die allgemeinen Fälle dabei ebenfalls vorgegeben, bei speziellen Anwendungsgebieten ist es jedoch ratsam einen Juristen zu konsultieren um sich Rechtlich absichern zu können.\\
-Auf die weiteren genauen Bestimmungen, Bedingungen und Inhalte des DSGVO kann im Rahmen dieser Arbeit nicht eingegangen werden, da diese, wie bereits vorhergehend erläutert, einerseits sehr umfangreich sind, andererseits unter Zuhilfenahme eines Juristen und Datenschutzbeauftragten durchgegangen werden sollten.\cite{datenschutz_dsgvo,noauthor_datenschutz-grundverordnung_nodate}\\
 
 \noindent Auf die weiteren genauen Bestimmungen, Bedingungen und Inhalte des DSGVO kann im Rahmen dieser Arbeit nicht eingegangen werden, da diese, wie bereits vorhergehend erläutert, einerseits sehr umfangreich sind, andererseits unter Zuhilfenahme eines Juristen und Datenschutzbeauftragten durchgegangen werden sollten. Darunter fallen zum Beispiel diverse im DSGVO enthaltenen Öffnungsklauseln welche im BDSG-neu beschrieben sind. Dieses BDSG-neu ist eine Erweiterung des DSGVO auf nationaler Ebene, dennoch gilt zuerst die DSGVO unmittelbar.\cite{datenschutz_dsgvo,noauthor_datenschutz-grundverordnung_nodate}\\
 
 \noindent Kurz sei an dieser Stelle noch erläutert, was ein \textbf{Datenschutzbeauftragter} ist und welche Aufgaben ihm zufallen. Ein Datenschutzbeauftragter ist direkt der Geschäftsleitung unterstellt und kontrolliert sowie evaluiert die Prozesse unter datenschutzrechtlichen Gesichtspunkten und berät Unternehmen und Behörden in Datenschutzfragen. Er sorgt somit dafür, dass die datenschutzrechtlichen Bestimmungen hinsichtlich personenbezogener Daten eingehalten werden und ist zwingend notwendig und muss regelmäßig konsultiert werden. Ändern sich Geschäftsprozesse, muss dieser umgehend informiert werden um die geänderten Prozesse zu überprüfen, weiterhin ist er dafür zuständig Angestellte hinsichtlich des Datenschutzes regelmäßig zu schulen.\cite{datenschutz_beauftragter}
 
+
 \subsection{Allgemeine Herausforderungen im Bezug auf das DSGVO}
 Wird das DSGVO in einem Unternehmen angewendet, so kommt es zu oft zu einer Vielzahl von Herausforderungen die gemeistert werden müssen. In diesem Abschnitt soll auf ein paar der Häufigsten eingegangen werden.
-
 
 \subsubsection{Zeitraum der Datenspeicherung}
 Ein wichtiges Recht welches durch die DSGVO gestärkt werden soll ist das \textbf{Recht auf Vergessen}. Das DSGVO gibt hierbei an, wann und unter welchen Umständen personenbezogene Daten zu löschen sind. Somit müssen diese Daten gelöscht werden sobald\textbf{Art. 17 Abs. 1 lit. a DSGVO}:
@@ -250,6 +251,7 @@ Problematisch ist hierbei jedoch, dass das DSGVO den Begriff ``Löschen" nicht g
 	\item Falls die Daten für eine Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen nötig sind
 \end{itemize}
 Interessant ist hierbei dass der besprochene Punkt der Löschung von Verknüpfungen und Codierungen welche durch eine vollständige Anonymisierung erreicht werden kann.
+
 \subsubsection{Weitergabe von Daten an dritte}
 Die Weitergabe von personenbezogenen Daten, stellt einen massiven Eingriff in die Rechte der betroffenen Person dar. Daher ist vorab von Unternehmen sowie Privatpersonen zu klären ob die Weitergabe nach \textbf{Art. 6 lit. a DSGVO} rechtens ist, siehe dazu auch \ref{verarbeitung_recht}. Diese Vorgaben und Bedingungen sind zwingend einzuhalten, da ansonsten hohe Bußgelder drohen. Trifft keine dieser Bedingungen zu so ist die Weitergabe grundsätzlich verboten.
 \subsubsection{Wann ist ein Datenschutzbeauftragter nötig}
@@ -259,8 +261,9 @@ Der Datenschutz findet Anwendung sobald personenbezogene Daten verarbeitet oder 
 
 \subsection{Intelligente Lernumgebung}
 \begin{quote}
-	„Everything will learn. These innovations are beginning to emerge enabled by cloud computing, big data analytics and learning technologies all coming together.“ - IBM
+„Everything will learn. These innovations are beginning to emerge enabled by cloud computing, big data analytics and learning technologies all coming together.“ - IBM
 \end{quote}
+
 \noindent Eine Intelligente Lernumgebung passt sich den individuellen Bedürfnissen der Lernenden an. \\
 Durch die Sammlung und Auswertung von Daten eines Lernenden und der Daten über die erbrachten Leistungen wird die Lernmethodik und der Inhalt so angepasst, dass der Lernprozess möglichst passend für den Lernenden geschneidert ist. 
 
@@ -269,9 +272,10 @@ Ein intelligentes Tutorsystem (ITS) ist ein Computersystem, das darauf abzielt, 
 
 
 \subsection{Digitale Lernspiele (Educational Serious Games)}
+
 Lernen mit Spaß ist der Grundsatz von Serious Games. Der Spaß am lernen fördert die Aufnahmefähigkeit des Lernstoffs. Das Wissen wird durch interaktive Methoden, die wie ein Spiel sind übermittelt, diese Strategie kann in jeder Bildungsstufe angewandt werden. 
 Insbesonders digitale Lernspiele ermöglichen auch durch Fehler, die sonst einen Schaden verursachen würden, in der digitalen Welt durchzuführen. Das "Learning by doing" wird hiermit gefördert. Ein gutes Beispiel für so ein digitales Lernspiel wären Flugsimulator Spiele.
-
+\newpage
 \section{Stand der Forschung und Technik}
 Im Bereich des Datenschutzes beschränkt sich die Forschung überwiegend auf die Diskussion darüber, was die Privatsphäre eines Menschen ist und wie sie in ethischer Sicht und zu Forschungszwecken mit dem DSGVO in Einklang gebracht werden kann. Dabei ist das LACE-Projekt der Eu ein wichtiger Anhaltspunkt\cite{lace_allgemein}. Learning Analytics Community Exchange (LACE) ist ein von der EU finanziertes Projekt an dem viele verschiedene Institutionen, darunter vor allem Universitäten) teilgenommen haben. Die Teilnehmer des LACE Projekts beschäftigten sich mit den damals aktuellen und zukünftigen Ansichten von Learning Analytics und Educational Data Mining. Im Kontext des Datenschutzes soll es Unternehmen und Forschungseinrichtungen darüber informieren welche Daten privat sind und wie die Privatsphäre, wie vom DSGVO verlangt umgesetzt werden kann. Da es jedoch vor dem eigentlichen Gesetzestext des DSGVO ins Leben gerufen wurde, gibt es eher einen Leitfaden über den generellen Umgang mit Daten. Dieser Leitfaden wurde als ``DELICATE" Checkliste zusammengefasst, siehe dazu \autoref{fig:delicate}\\
 \begin{figure}[!h]
@@ -283,7 +287,7 @@ Im Bereich des Datenschutzes beschränkt sich die Forschung überwiegend auf die
 \noindent Diese Punkte sollen eine Grundlage bieten, wie an das Thema Datenschutz herangegangen und welche Daten eigentlich wie gesammelt und gespeichert werden können. Weitere Arbeiten über das DSGVO im Bereich Learning Analytics und Big-Data gehen ebenfalls eher auf die Ethischen Aspekte sowie den Datenschutz allgemein ein. So wird darüber diskutiert, welche Daten gespeichert werden können, oder welche Daten überhaupt nützlich sein könnten, wie die Nutzer zu informieren sind und was dies für Auswirkungen auf die Lehre und Forschung haben kann. Werden viele Daten gesammelt, also wenn Learning Analytics und Big-Data zusammen agieren, ergibt sich hierbei vorallem das problem für Bestandsdaten. Diese müssen ebenfalls DSGVO konform gehalten werden, was einen großen Anonymisierungsaufwand bedeuten kann. Die meisten im Rahmen dieser Arbeit verfügbaren Quellen sind jedoch aus der Zeit vor dem in Kraft treten und endgültigem Verabschieden des DSGVO und geben somit vielmehr Leitfäden, Ideen und Konzepte wie ein neues Learning Analytics System gestaltet werden kann und gehen kaum auf die Adaptionsmöglichkeiten für Bestehende Systeme ein\cite{hoel_privacy-driven_2016,hoel_implications_2016}.\\
 Zusammengefasst kann somit gesagt werden, dass es nicht viel direkte Forschung in diesem Bereich gibt, grade für bestehende Systeme, sondern vielmehr Leitfäden und Ansätze welche neue Systeme von Grund auf für den Datenschutz gestaltet werden können.
 \newpage
-\subsection{Datenschutz/DSGVO \& E-Learning \textbackslash Learning Analytics}
+\subsection{Datenschutz/DSGVO \& E-Learnings\textbackslash Learning Analytics}
 Da wie bereits in den vorhergehenden Kapiteln der Datenschutz über das DSGVO allgemein ausgelegt ist und sich ausschließlich mit dem Verarbeiten von personenbezogenen Daten bezieht, gibt es diesbezüglich keine Forschung. Das DSGVO ist eine Gesetzesvorlage die einzuhalten ist, da ansonsten Bußgelder und Sanktionen drohen. Somit ist es irrelevant in welchem Kontext solche Daten verarbeitet werden, sei es über eine Umfrage oder das maschinelle Auswerten von Ergebnissen und Daten innerhalb eines Adaptiven Lernspieles. Sobald personenbezogene Daten, siehe Kapitel \ref{datenschutz_kap}, involviert, erhoben oder auf irgend eine weise verarbeitet werden, greift das DSGVO und ist einzuhalten. Problematisch ist hierbei vor allem, ob durch genutzte Algorithmen nicht personenbezogene Daten doch einer bestimmten und korrekten Person zugeordnet werden könnten. Dies ist jedoch einer der Fälle, bei denen ein Datenschutzbeauftragter hinzugezogen werden sollte und übersteigt die Möglichkeiten innerhalb dieser Arbeit bei weitem.\\ Somit sollte als eine Grundregel gelten, dass genutzte Algorithmen überprüft werden und die Menge der verarbeiteten Daten auf ein Minimum reduziert wird.\\Weiterhin ist es sinnvoll zu prüfen in wie weit personenbezogene Daten für eine Auswertung überhaupt nötig sind:
 \begin{itemize}
 	\item Wird der Vollständige Name benötigt?
@@ -292,7 +296,9 @@ Da wie bereits in den vorhergehenden Kapiteln der Datenschutz über das DSGVO al
 \end{itemize}
 Da ein Lernspiel in der Regel mehrfach vom gleichen Nutzer aufgerufen und genutzt wird, ist eine Art der Identifikation nötig. Dies kann jedoch wie vom DSGVO vorgesehen über ein Pseudonym erfolgen, was ein erster Schritt zum Datenschutz des Betroffenen ist. Weitere personenbezogene Angaben dürfen hierbei, erst gespeichert werden, wenn der Betroffene dem zustimmt. Dies ist hierbei für alle Bereiche die das DSGVO tangiert gleich.
 
+\newpage
 \subsection{Anonymisierungsmethoden}
+
 Unter Anonymisierung versteht man nach §~3~Abs.~6~BDSG: „Das Verändern personenbezogener Daten derart, dass die Einzelangaben über persönliche oder sachliche Verhältnisse nicht mehr oder nur mit einem unverhältnismäßig großen Aufwand an Zeit, Kosten und Arbeitskraft einer bestimmten oder bestimmbaren natürlichen Person zugeordnet werden können.“ \\
 
 \noindent Das bedeutet, dass für Daten, welche anonymisiert vorliegen, die Grundsätze des Datenschutzes nicht gelten. Der Einsatz von Anonymisierung bildet somit eine Gesetzeskonforme Möglichkeit, mit sensiblen Daten umzugehen. \\
@@ -330,9 +336,9 @@ Entfernt man die Daten aus dem Datensatz, so entsteht eine neue Tabelle. Der neu
 
 \subsubsection*{K-Anonymität}
 
-Die K-Anonymität verhindert die Zuordnung zu einer natürlichen Person in einem Datenbestand durch Anonymisierung dieser in einer Gruppe von anderen Personen des Datenbestandes. Die drei Merkmale von vorhin, mit denen eine Person annähernd genau identifiziert werden kann, werden Quasi-Identifiers genannt. Die k-Anonymität bezieht sich auf die Identifizierbarkeit einer Person in einer Gruppe. Man versucht Merkmale, die eine Person eindeutig identifizierbar machen, innerhalb einer Gruppe, so abzuändern, dass mehrere Personen in der Gruppe die selben Quasi-Identifier haben. Im Folgenden wird ein Beispiel für eine K=2 Anonymisierte Tabelle gezeigt. K=2 bedeutet, dass mindestens zwei Personen das gleiche Merkmal haben müssen. \\
-
-\begin{tabular}{lcrr}
+ Die K-Anonymität verhindert die Zuordnung zu einer natürlichen Person in einem Datenbestand durch Anonymisierung dieser in einer Gruppe von anderen Personen des Datenbestandes. Die drei Merkmale von vorhin, mit denen eine Person annähernd genau identifiziert werden kann, werden Quasi-Identifiers genannt. Die k-Anonymität bezieht sich auf die Identifizierbarkeit einer Person in einer Gruppe. Man versucht Merkmale, die eine Person eindeutig identifizierbar machen, innerhalb einer Gruppe, so abzuändern, dass mehrere Personen in der Gruppe die selben Quasi-Identifier haben. Im Folgenden wird ein Beispiel für eine K=2 Anonymisierte Tabelle gezeigt. K=2 bedeutet, dass mindestens zwei Personen das gleiche Merkmal haben müssen. \\
+ 
+ \begin{tabular}{lcrr}
 	
 	Geschlecht & PLZ & Geburtsdatum & Lieblingsfarbe\\
 	\hline
@@ -344,15 +350,27 @@ Die K-Anonymität verhindert die Zuordnung zu einer natürlichen Person in einem
 \end{tabular}
 \vspace{10mm}
 
-Im vorherigen Beispiel wird dies geschaffen, indem man Teilinformationen weglässt. Es wird die letzte Ziffer der Postleitzahl durch ein Symbol ersetzt, somit haben mehrere Leute die gleiche Postleitzahl. Zudem wird der Tag und der Monat des Geburtsdatums durch ein Symbol ersetzt. Das anwenden der K-Anonymität hat natürlich auch großen Einfluss auf die Datenqualität, jedoch nicht so stark, wie das Löschen der Felder.
+\noindent Im vorherigen Beispiel wird dies geschaffen, indem man Teilinformationen weglässt. Es wird die letzte Ziffer der Postleitzahl durch ein Symbol ersetzt, somit haben mehrere Leute die gleiche Postleitzahl. Zudem wird der Tag und der Monat des Geburtsdatums durch ein Symbol ersetzt. Das anwenden der K-Anonymität hat natürlich auch großen Einfluss auf die Datenqualität, jedoch nicht so stark, wie das Löschen der Felder.
+\newpage
+
+\subsubsection{Dynamische Anonymisierungsmethoden}
+
+Anonymisierung ist oft komplex und fehleranfällig. Es muss je nach Anwendungsfall eine verschiedene Technik zur anonymisierung benutzt werden. Dazu kommt, dass die anonymisierung von Daten eine deutliche Auswirkung darauf hat, was man mit den Daten im nachhinein noch bewirken kann.
+
+\noindent Bei der im vorherigen Kapitel betrachteten statischen Anonymisierung eines Datensatzes muss das richtige Verhältnis zwischen Nutzen (d.h. weniger Anonymisierung) und Sicherheit (stärkere Anonymisierung) gefunden werden. Dieses Gleichgewicht ist schwer zu finden, dies ist eine der Ursachen für Verstöße gegen die DSGVO. 
+
+\noindent Die statistische Anonymisierung eines Datensatzes erfordert eine manuelle Auswahl von Spalten in einer Datenbank, die personenbezogene Daten enthält, um diese dann zu verändern oder zu löschen.
+
+\noindent Zur Vereinfachung dieser Aufgabe gibt es Software-Lösungen, die Daten dynamisch Anonymisieren (z.B. Aircloak).
+Aircloak ermöglicht einem Analysten den Zugriff auf alle zugrunde liegenden Daten und passt die Anonymisierung dynamisch an die spezifische Abfrage und die angeforderten Daten an. Die Software-Lösung erkennt,  welche Daten unter welchen Umständen sensibel sind, was den Analysten von der fehleranfälligen manuellen Konfiguration befreit.\cite{Aircloak}
+
 
 \subsection{Pseudonymisierung}
 
 Eine weitere Art des Schutzes der zugänglich gemachten Daten eines Nutzers stellt die sogenannte Pseudonymisierung dar. Im Gegensatz zur vollständigen Anonymisierung, welche im vorgehenden Kapitel erläutert wurde, werden hierbei personenbezogene oder persönliche Daten durch das Ersetzen von Kennzeichen oder Pseudonymen verändert. Genauer sind dies solche Daten und Merkmale, welche zur Identifikation einer Person genutzt werden können, also Identifikationsmerkmale. Dies soll eine Identifikation und Bestimmung des Betroffenen ausschließen oder zumindest deutlich erschweren. Jedoch ist es durch die Zusammenführung der Daten weiterhin möglich auf die Person zu schließen. Wichtig ist hierbei das die Zuordnung der Pseudonyme zu den tatsächlichen Daten separat und gut gesichert gespeichert wird, sodass der Aufwand diese Daten zu erlangen erheblich vergrößert wird. Was in diesem Kontext unter ``erheblich" zu verstehen ist, würde den Rahmen dieser Arbeit übersteigen, da dies eher in die Zuständigkeit eines Juristen bzw. Datenschutzbeauftragen fällt und im Einzelfall geklärt werden muss. Rechtlich fallen pseudonymisierte Daten weiterhin unter den Datenschutz und geltende Gesetze diesbezüglich.
 \cite{thesing_anonym_pseudonym, datenschutz_pseudonymisierung}
-
+\newpage
 \noindent Anbei sei noch ein Beispiel für eine Pseudonymisierung gegeben:\\
-
 \noindent Vor der Pseudonymisierung:\\
 
 \begin{tabular}{lcrr}
@@ -380,75 +398,51 @@ Eine weitere Art des Schutzes der zugänglich gemachten Daten eines Nutzers stel
 	0001 & Peter & Meyer
 	
 \end{tabular}\vspace{10mm}
-
+\newpage
 \section{Szenario: Learning Analytics für ein adaptives \\Bildauswertung-Lernspiel}
 
-SAR-Tutor ist eine vom Frauenhofer Insitut entwickelte Lernsoftware für die Radarbildauswertung. Grundlegende Prinzipien der Radartechnik und insbesondere des synthetischen Apertur Radar (SAR) werden als interaktiver Kurs mit Bilderkennungsaufgaben sowie Wissensfragen beigebracht. Die Ausbildung zur Radarbildauswertung wird in vielen Bereichen wie Küsten- und Gewässerschutz, Umweltschutz, Aufklärung und Überwachung benötigt. \\
+
+\begin{quote}Lost Earth 2307 ist ein 4X Strategie-Spiel für die Luft- und Satellitenbildauswertung. Der Spieler erkundet und befreit fremde Planeten und lernt dabei, optische, Infrarot- und Radarbilder auszuwerten. Die Einsatzmöglichkeiten unterschiedlicher Sensorplattformen wie Drohnen, Flugzeuge und Satelliten werden ebenfalls vermittelt. \cite{lostearth}
+\end{quote}
+Im folgenden Teil wollen wir anhand von zwei Szenarien der Datenspeicherung, die bei der Betreibung des  Lost Earth 2307 Spiels enstehen kann beschäftigen. 
 
 \subsection{Szenario 1: Benutzername und Passwort}
-In unserem ersten Szenario gehen wir vom momentanen Stand des Spiels aus. Das Spiel ist nicht adaptiv und speichert nur die Registrierungsdaten des Nutzers. Es werden keine Zugriffsdaten auf die Website gespeichert.\\
+In unserem ersten Szenario gehen wir davon aus, dass nur die Registrierungsdaten des Nutzers gespeichert werden. Es werden keine Zugriffsdaten auf den Spielserver gespeichert, damit auch keine IP-Adressen.\\
 
-\noindent Damit das Szenario 1 Datenschutzkonform ist, muss als erster Schritt zwingend bei der Registrierung auf der Website eine Datenschutzerklärung akzeptiert werden.
+\noindent Damit das Szenario 1 Datenschutzkonform ist, muss als erster Schritt zwingend bei der Registrierung für das Spiel eine Datenschutzerklärung akzeptiert werden.
 In dieser Datenschutzerklärung muss darauf hingewiesen werden, dass die Registrierungsdaten gespeichert werden. Dies erfolgt z.B. durch folgenden Absatz in der Datenschutzerklärung: 
-\newpage
 \begin{quote}
-	Registrierung auf dieser Website
-	
-	Zur Nutzung bestimmter Funktionen können Sie sich auf unserer Website registrieren. Die übermittelten Daten dienen ausschließlich zum Zwecke der Nutzung des jeweiligen Angebotes oder Dienstes. Bei der Registrierung abgefragte Pflichtangaben sind vollständig anzugeben. Andernfalls werden wir die Registrierung ablehnen.
-	
-	Im Falle wichtiger Änderungen, etwa aus technischen Gründen, informieren wir Sie per E-Mail. Die E-Mail wird an die Adresse versendet, die bei der Registrierung angegeben wurde.
-	
-	Die Verarbeitung der bei der Registrierung eingegebenen Daten erfolgt auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Ein Widerruf Ihrer bereits erteilten Einwilligung ist jederzeit möglich. Für den Widerruf genügt eine formlose Mitteilung per E-Mail. Die Rechtmäßigkeit der bereits erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.
-	
-	Wir speichern die bei der Registrierung erfassten Daten während des Zeitraums, den Sie auf unserer Website registriert sind. Ihren Daten werden gelöscht, sollten Sie Ihre Registrierung aufheben. Gesetzliche Aufbewahrungsfristen bleiben unberührt.
+Registrierung auf dieser Website
+
+Zur Nutzung bestimmter Funktionen können Sie sich auf unserer Website registrieren. Die übermittelten Daten dienen ausschließlich zum Zwecke der Nutzung des jeweiligen Angebotes oder Dienstes. Bei der Registrierung abgefragte Pflichtangaben sind vollständig anzugeben. Andernfalls werden wir die Registrierung ablehnen.
+
+Im Falle wichtiger Änderungen, etwa aus technischen Gründen, informieren wir Sie per E-Mail. Die E-Mail wird an die Adresse versendet, die bei der Registrierung angegeben wurde.
+
+Die Verarbeitung der bei der Registrierung eingegebenen Daten erfolgt auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Ein Widerruf Ihrer bereits erteilten Einwilligung ist jederzeit möglich. Für den Widerruf genügt eine formlose Mitteilung per E-Mail. Die Rechtmäßigkeit der bereits erfolgten Datenverarbeitung bleibt vom Widerruf unberührt.
+
+Wir speichern die bei der Registrierung erfassten Daten während des Zeitraums, den Sie auf unserer Website registriert sind. Ihren Daten werden gelöscht, sollten Sie Ihre Registrierung aufheben. Gesetzliche Aufbewahrungsfristen bleiben unberührt.
 \end{quote}
 
-\noindent Die Registrierungsdaten (Kontoname und Passwort) müssen daraufhin so gespeichert werden, dass der Zugriff deutlich erschwert ist. Um eine weitere Abstraktionsstufe einzufügen, könnten die Daten Pseudonymisiert werden. \\
+\noindent Die Registrierungsdaten (Kontoname und Passwort) müssen daraufhin so gespeichert werden, dass der Zugriff deutlich erschwert ist. 
+\subsection{Szenario 2: Benutzername, Passwort, Alter, Geschlecht, Bildungsgrad, Lernverhalten}
 
-\noindent Die Pseudonymisierung der Datensätze in der Datenbank könnte wie folgt aussehen:\\
+In diesem Szenario gehen wir davon aus, dass die Lost Earth 2307 Server weitere Daten speichern, um das Spiel im weiteren Verlauf für den Benutzer anzupassen. Um den Lernverlauf für den Lernenenden am besten zu gestalten benötigt das Spiel verschiedene Daten.\\
 
-\begin{tabular}{lc}
-	
-	ID & Benutzername \\
-	\hline
-	0001 & MaxMust99
-	
-\end{tabular}\\\\
+\noindent Wie im Szenario 1 wird eine Registrierung mit Benutzername und Passwort benötigt. Lost-Earth 2307 benötigt aber auch noch Daten zur adaptivität. Um eine Einstufung vor dem Spielen zu erstellen benötigen wir in unserem Fall das Alter, das Geschlecht und den Bildungsgrad des Lernenden. Diese Daten sollen dann  auch bei der Registrierung abgefragt werden. 
+Im weiteren Spielverlauf kann das Lernverhalten des Lernenden basierend auf das festgestellte Lernmuster weiterhin angepasst werden. Diese Daten werden auch gespeichert.
 
-\begin{tabular}{lcrr}
-	
-	ID & Verschlüsseltes Passwort\\
-	\hline
-	0001 & 0x88192A8F32492
-	
-\end{tabular}
-\newpage
-\subsection{Szenario 2: Benutzername, Passwort, Alter, Geschlecht Bildungsgrad, Lernverhalten}
-
-In diesem Szenario gehen wir davon aus, dass der SAR-Tutor adaptiv ist. Um den Lernverlauf für den Lernenenden am besten zu gestalten benötigt das Spiel verschiedene Daten.\\
-
-\noindent Wie im Szenario 1 wird eine Registrierung mit Benutzername und Passwort benötigt. Der SAR-Tutor benötigt aber auch noch Daten zur adaptivität. Um eine Einstufung vor dem Spielen zu erstellen benötigen wir in unserem Fall das Alter, das Geschlecht und den Bildungsgrad des Lernenden. Diese Daten sollen dann  auch bei der Registrierung abgefragt werden. 
-Im weiteren Spielverlauf kann das Lernverhalten des Lernenden basierend auf das festgestellte Lernmuster (Prozent der korrekten Antworten, Zeit zum Antworten) weiterhin angepasst werden. Diese Daten werden auch gespeichert.
-
-Analog zum Szenario 1 muss bei der Registrierung (vor dem Speichern von Daten) die Datenschutzerklärung akzeptiert werden. In diesem Fall wird die Datenschutzerklärung noch um die Daten ergänzt, die wir für die Adaptivität benötigen.\\
+\noindent Analog zum Szenario 1 muss bei der Registrierung (vor dem Speichern von Daten) die Datenschutzerklärung akzeptiert werden. In diesem Fall wird die Datenschutzerklärung noch um die Daten ergänzt, die wir für die Adaptivität benötigen.\\
 
 Die Daten könnten dann wieder pseudonymisiert in der Datenbank gespeichert werden:\\
 
-\begin{tabular}{lc}
+\begin{tabular}{lccc}
 	
-	ID & Benutzername \\
+	ID & Benutzername & Verschlüsseltes Passwort\\
 	\hline
-	0001 & MaxMust99
+	0001 & MaxMust99 & 0x88192A8F32492
 	
 \end{tabular}\\\\
 
-\begin{tabular}{lcrr}
-	
-	ID & Verschlüsseltes Passwort\\
-	\hline
-	0001 & 0x88192A8F32492
-	
-\end{tabular}\\\\
 
 \begin{tabular}{lcrrrr}
 	
@@ -457,6 +451,8 @@ Die Daten könnten dann wieder pseudonymisiert in der Datenbank gespeichert werd
 	0001 & 18 & M & Abitur & 4
 	
 \end{tabular}
+
+
 
 \newpage
 \section{Fazit \& Ausblick}
